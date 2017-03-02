@@ -1,0 +1,50 @@
+00:04:20	Algorithm Analysis
+			Used to help us decide what algorithm or data 
+			structure is best (Efficient) for our problem we are solving.
+			
+			Sorting algorithms
+				Bubble Sort: Inneficient. 100 Elements takes 1 second (avg).
+
+00:26:30	Time Complexity - Time to complete algorithm
+
+00:31:50	Martix Multiplication SUDO Code
+				A =	|a11,a12|	B = |b11,b12|	C =	A*B	|[(a11*b11)+(a12*b21)]	[(a11*b12)+(a12*b22)]	|
+					|a21,a22|		|b21,b22|			|[(a21*b11)+(a22*b21)]	[(a21*b12)+(a22*b22)]	|
+				A =	|1,2|	B = |1,1|	C =	A*B	|[(1*1)+(2*1)]	[(1*1)+(2*1)]	|
+					|3,4|		|1,1|			|[(3*1)+(4*1)]	[(3*1)+(4*1)]	|	
+				A =	|1,2|	B = |1,1|	C =	A*B	|[(1)+(2)]	,[(1)+(2)]	|
+					|3,4|		|1,1|			|[(3)+(4)]	,[(3)+(4)]	|
+				A =	|1,2|	B = |1,1|	C =	A*B	|3,3|
+					|3,4|		|1,1|			|7,7|
+					
+
+00:41:00		Matrix Multiplication
+				for(int i=0; i<n;i++){		// n exacutions
+					for(int j=0;j<n;j++){	//n^2 executions
+					c[i][j]=0;	//n^2
+						for(int k=0 k<n;k++){	//n^3
+						c[i][j]=c[i][j]+a[i][j]*b[j][k];	//n^3
+						}
+					}
+				}
+
+00:54:00	int sum(int n)						# of Iterations		# statements
+			{										n=1					1+1+1+1=4
+				int result = 0;			//O(1)		n=2					1+2+2+1=6
+				for(int i=0; i<n; i++){	//O(n)		n=4					1+4+4+1=10	
+					result = result++;	//O(n)		n=8					1+8+8+1=18					
+				}
+				return result;			//O(1)		O(1)+O(n)+O(n)+O(1)
+										//			2*O(1)	 + 2*O(n)
+			}							//			2*1		 +	2*n
+			
+			
+			
+			Simplified:
+			int sum2(int n){
+				return n*(n+1)/2;
+			}
+			
+			
+			Merge sort to be cont...
+			merge sort is done in Big o n log n:	 O(n lg n)
