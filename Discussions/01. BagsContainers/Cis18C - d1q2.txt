@@ -1,0 +1,5 @@
+Question #2
+
+In your own words, propose a way that we could modify our 
+Bag/Container to become a sorted Bag/Container in which 
+when we add a new item, the item is added to the Bag/Container.

@@ -1,0 +1,20 @@
+Bag/Collection Assignment Tip
+If you find yourself having issues with comparing two items of type T with
+ the compareTo method, you will want to change your class header to:
+
+public final class Bag<T extends Object & Comparable<? super T> > implements BagInterface {
+
+Remember, the type T must be a class, cannot be the primitive types.
+
+P.S. The due date/time has been pushed back two days from 3/22/2017 to 3/24/2017 (the Early Bird Bonus was pushed back two days as well).
+
+
+00:03:30	Wrapper Class Integer
+			
+				Bag <Integer> bi,
+			
+00:12:55	Linked List
+				Datatypes have their pros and cons
+				
+00:15:30	Single Linked List
+				

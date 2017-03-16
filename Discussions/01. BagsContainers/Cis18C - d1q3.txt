@@ -1,0 +1,4 @@
+Question #3
+
+In your own words, propose how we could improve 
+the remove method in our Bag/Container class.

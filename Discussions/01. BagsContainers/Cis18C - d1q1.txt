@@ -1,0 +1,3 @@
+Question #1
+
+In your own words, explain what is a container in data structures.
