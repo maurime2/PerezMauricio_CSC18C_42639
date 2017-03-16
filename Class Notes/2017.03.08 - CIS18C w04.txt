@@ -1,0 +1,45 @@
+00:00:00	What We Will see today
+				Bag/Container
+				Single Linked List
+				Double Linked List
+				Stacks
+				Queue/Deques - Double Ended Queue
+				Trees/Graphs
+				Hash Tables
+
+00:04:17	Saving
+
+
+09:09:52	UML Diagrams
+			*************************************************
+			*				BAG<T>							*
+			*************************************************
+			* - bag_Items[]: T									*	public  -> +
+			* - num_items: int								*	private -> -
+			* ***********************************************	protected -> #
+			* + Bag(int initial Size)						*
+			* + add(int item):boolean						*
+			* + remove(int item):boolean					*
+			* + getSize()int								*
+			* + isEmpty():boolean							*
+			* + isFull():boolean							*
+			*************************************************
+
+00:38:15	Big O
+				if a single statement not inside a loop is: O(1)
+
+00:41:09	max(O(s1), O(s2), O(s3),...)
+				
+				int xyz()
+				{
+					int x=50;				   //O(1)
+					int z-0;				  //O(1)
+					for(int i=0; i<x; i++){	 //O(n)
+						z=z+(i*i);			//O(1)
+					}					   //
+										  //
+					return z			 //O(1)
+				}
+			
+
+
