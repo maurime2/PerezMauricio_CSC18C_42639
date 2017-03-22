@@ -1,0 +1,6 @@
+In your own words, describe some scenarios that could have 
+Bags/Containers be of great use.
+
+Bags could be used in declaring Cars and their parts, Sports teams and their people involved with their franchise, or a computer and its parts.
+In each of these, you could use bags to define who or what is involved in the main ADT(abstract data type). You could also then define what functions each data type can preform.
+

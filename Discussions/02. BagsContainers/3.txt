@@ -1,0 +1,8 @@
+In your own words, 
+propose how we could improve the 
+remove method in our Bag/Container class.
+
+
+I think I'm over thinking this question too much. I don't see how to improve the remove method, seeing as how﻿﻿ you have to traverse each element after the element you are removing.
+What you can do is sort the bag to then implement a search for the element in question, but even then, I still think you somehow have to traverse through the whole bag when deleting and shifting the bag down one elelemnt.
+I am not sure...

@@ -1,0 +1,23 @@
+In your own words, explain what is a container in data structures.
+
+A container is a class, data structure, or ADT(abstract data type) that collects objects in a specific way, which can also be accessed in a specific way.
+It is not limited in size, unless specified, but should be as big or bigger than the intended objects it contains.
+
+
+Java tutorials: Trial Collections
+http://docs.oracle.com/javase/tutorial/collections/index.html
+
+Lesson: Interfaces
+http://docs.oracle.com/javase/tutorial/collections/interfaces/index.html
+
+Annotated Outline of Collections Framework
+http://docs.oracle.com/javase/6/docs/technotes/guides/collections/reference.html
+
+The Trove library
+http://trove.starlight-systems.com/
+
+Package java.util
+http://docs.oracle.com/javase/6/docs/api/java/util/package-summary.html
+
+Choosing the right Collection
+http://www.javapractices.com/topic/TopicAction.do?Id=65
