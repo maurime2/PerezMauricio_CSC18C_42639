@@ -1,1 +1,65 @@
 00:02:50	Heap Sort: https://visualgo.net/heap
+
+00:16:20	Data has a next node (like a pointer, not called a pointer)
+
+			*************
+			*		* n *
+			*  5	* u *
+			*		* l *
+			*		* l *
+			*************
+				H/T
+				
+00:18:55	UML Diagram class Node
+
+		*************************************
+		*									*
+		*			Node					*
+		*									*
+		*************************************
+		*	+Node()							*
+		*	+Node(int)						*
+		*	+node(int, Node) 				*	//add a node on to linked list
+		*	+getData() int					*
+		*	+setData(int)					*
+		*	+setNext()						*	//Remove a node from LL
+		*************************************
+		
+			*************		*************
+			*		* n *		*		* n *
+			*  5	* u * ---->	*	6	* u *
+			*		* l *		*		* l *
+			*		* l *		*		* l *
+			*************		*************
+				H					T
+				
+				
+				
+		Add:
+			if head == null
+				- create a new node for head;
+				- tail is assigned to head;
+				
+00:25:00	else
+				- create a new node named temp
+				- tail.setNext(temp)
+				- tail = temp
+				
+			listCount++
+			
+			
+00:39:30	traversing - when you go through the whole array
+				Traversing = O(n)
+				
+00:47:40	Puting a linked list together
+								if listCount-1 > indexPos
+									add to end of tail
+			0				1				2				3				4
+			******      	******			******			******			******
+			*5: :* 	--->	*4: :*	--->	*6: :*	--->	*3: :*	--->	*8: :*
+			******      	******			******			******			******
+			
+			
+01:02:43				
+			
+			

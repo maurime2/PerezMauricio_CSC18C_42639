@@ -20,14 +20,46 @@ public class LinkedList {
     public void add(int dataValue) 
     {
         // to do: 3/22/17
+        
+        Node temp = new Node(dataValue);    //created our new node         //O(n
+        //If head is null, newly created node is head and tail for starters )
+        if (head ==null )
+        {
+            head = temp;
+            tail = head;
+        }
+        else
+        {
+            tail.setNext(temp);
+            tail = temp;
+        }
+        
         listCount++;
     }
 
     // inserts the specified element at the specified position in this list
-    public void add(int dataValue, int indexPosition) 
+    public void add(int dataValue, int indexPosition)               //O(n)
     {
         // to do: 3/22/17
-        listCount++;
+        if( indexPosition >= listCount-1)
+        {
+            this.add(dataValue);
+        }
+        else
+        {
+            Node previous = null;
+            Node current = head;
+            for (int i=0;i<indexPosition;i++)
+            {
+                previous = current;
+                current = current.getNext();
+            }
+            Node temp = new Node(dataValue); //Create our new node
+            previous.setNext(temp);         //
+            temp.setNext(current);         //
+            listCount++;                  //Adds for only the else instance
+        }
+
     }
 
     // returns the element at the specified index position in this list

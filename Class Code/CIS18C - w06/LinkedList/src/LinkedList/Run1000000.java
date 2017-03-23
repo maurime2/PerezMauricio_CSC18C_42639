@@ -17,8 +17,11 @@ public class Run1000000 {
     public static void main(String[] args) {
         LinkedList test = new LinkedList();
         // add a nodes with the dataValues of 1 to 1,000,000
-        for (int i=1;i<=1000000;i++)
+        for (int i=1;i<=10;i++)
             test.add(i);
+        
+        test.add(26,5);
+            System.out.println( test.toString());
     }
-    
+
 }
