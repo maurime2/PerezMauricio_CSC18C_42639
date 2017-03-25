@@ -1,4 +1,4 @@
-public interface BagInterface<T> {
+public interface BagInterface<T extends Object> {
     // return the current size of the bag, or the number of elements in the bag
     public int getSize();
     
@@ -23,6 +23,6 @@ public interface BagInterface<T> {
     // returns array of items in bag
     public T[] toArray();
 	
-	// sorts the bag from smallest to largest value - left as an assignment
-	public void sort();
+    // sorts the bag from smallest to largest value - through Quick, Merge or Heap Methods
+    public T[] sort();
 }

@@ -1,6 +1,19 @@
-public final class Bag<T> implements BagInterface<T> {
+
+import java.util.Scanner;//This library will alow us to scan into console
+
+public final class Bag<T extends Object & Comparable<? super T> > implements BagInterface<T>  {
     private T[] bag_items;
+    private T bag_items_t;
     private int num_items;
+    
+    //For user input
+    Scanner input = new Scanner (System.in);  //creates a scanner "input"
+    int inputSort = 0;                       //For sort Select
+    boolean inputSortT = false;             //For sort Select
+    //For Printing Array
+    Object[] a = toArray();
+    
+    
     
     public Bag() {
         bag_items = (T[])new Object[10]; // default 10 item bag
@@ -68,4 +81,110 @@ public final class Bag<T> implements BagInterface<T> {
         for(int i=0;i<this.num_items;i++) arr[i]=this.bag_items[i];
         return arr;
     }            
+
+    
+    public T[] sort() {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        System.out.println("********"); 
+        System.out.println("* Sort *");
+        System.out.println("****************************************************");
+        System.out.println("*Chose one:                                        *");
+        System.out.println("*1 for Quick Sort                                  *");
+        System.out.println("*2 for Merg Sort                                   *");
+        System.out.println("*3 for Heap Sort                                   *");
+        inputSortT = false;
+        
+        //Imput selection and sorts
+        do{
+            //Menu Start
+            System.out.println("****************************************************");
+
+            //Take input: User Selection Prompt
+            System.out.print("*Input 1,2, or 3:                                  *");
+            inputSort=input.nextInt();
+            System.out.println("****************************************************");
+
+            //Print Selection back to user and sort within
+            if(inputSort==1){
+            System.out.println("*    -->Quick Sort Selected!<--                    *");
+            
+              //************//
+             //Quick Sort  //  // uses bag_items
+            //************//  // and num_items
+            
+            
+            
+            System.out.println("****************************************************");
+            inputSortT = true;
+            }
+            else if(inputSort==2){
+            System.out.println("*    -->Merge Sort Selected!<--                    *");
+
+              //************//
+             //Merge Sort  // // uses bag_items
+            //************// // and num_items
+            int l=0;                //Left
+            int n=0;                //Next
+            int r=num_items/2;     //Right
+            int p=0;    //Position/Place Holder
+            boolean unsort = true;
+            
+            
+
+            //Left Side:
+            do{
+            //Split into two
+            p=r-1;    //Middle
+                for(int i=0;i<=p-1;i++){
+                    if(bag_items[i].compareTo(bag_items[i+1])<0){;
+                    
+                    
+                    bag_items_t = bag_items[i];   
+                        
+                    bag_items[i]=bag_items[i+1];
+                    bag_items[i+1]=bag_items_t;
+                    }
+                }
+                unsort=true; //NOT COMPLETE
+            }while(unsort);
+            
+            
+            System.out.println("****************************************************");
+            inputSortT = true;
+            }
+            else if(inputSort==3){
+            System.out.println("*    -->Heap Sort Selected!<--                     *");
+            
+              //************//
+             //Heap Sort   //
+            //************//
+            System.out.println("****************************************************");
+            inputSortT = true;
+            }  
+            else{
+                System.out.println("*Try again:                                 *");
+                System.out.println("*********************************************");
+                inputSortT = false;
+            }                       //Loop back to User Selection Prompt...
+        }while(inputSortT==false); //if false
+        
+        
+        //
+        System.out.println("*Here are the results un-sorted                    *");
+        System.out.println("*Size of bag_of_strings=" + getSize()+"                          *" );
+        System.out.println("*Contents of bag_of_strings:                       *");
+        
+        
+        //Loop through bag_of_strings - After Sort
+        for(int i=0;i<a.length;i++) {
+            System.out.printf("*a[%d]=%s\n",i,a[i]);
+        }
+        System.out.println("****************************************************");
+        System.out.println("****************************************************");
+        System.out.println("****************************************************");
+        
+        
+        return bag_items;
+    }
 }
