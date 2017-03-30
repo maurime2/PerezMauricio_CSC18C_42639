@@ -84,10 +84,49 @@ public final class Bag<T extends Object & Comparable<? super T> > implements Bag
         return arr;
     }            
 
+
     
     public T[] sort() {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         //Menu
+        menu();
+        
+        
+        
+        return bag_items;
+    }//END of Sort 
+    
+    
+    public T[] sizeN_or_1(){
+            //Array Size 1 or Null
+            
+            System.out.println("*               Array Size is 1                    *");
+            System.out.println("****************************************************");
+            return bag_items;   //Returns Empty Bag
+        
+    }//End sizeN_or_1
+    
+    public T[] size_2(){
+        System.out.println("*               Array Size is 2                    *");
+        System.out.println("****************************************************");
+        if(bag_items[0].compareTo(bag_items[1])>0){;
+            System.out.println("*                    Swap                          *");
+            bag_items_t = bag_items[1];   
+            bag_items[1]=bag_items[0];
+            bag_items[0]=bag_items_t;
+            }
+        return bag_items;   //Returns Sorted Bag of size 2
+    }//End size_2
+    
+    public T[] size_3_Merge(){
+        
+    return bag_items;   //Returns Sorted Bag of size 2
+    }
+    
+    //Menu for Sort
+    public T[] menu(){
+        System.out.println();
+        System.out.println();
         System.out.println("********"); 
         System.out.println("* Sort *");
         System.out.println("****************************************************");
@@ -126,12 +165,7 @@ public final class Bag<T extends Object & Comparable<? super T> > implements Bag
               //************//
              //Merge Sort  // // uses bag_items
             //************// // and num_items
-            int l=0;                //Left
-            int n=0;                //Next
-            int r=num_items/2;     //Right
-            int p=0;    //Position/Place Holder
-            
-            
+
             //array size null and 1
             if(num_items <= 1){       
                 return sizeN_or_1();
@@ -146,21 +180,7 @@ public final class Bag<T extends Object & Comparable<? super T> > implements Bag
             //Left Side:
             System.out.println("*               Array Size is > 3                    *");
             System.out.println("****************************************************");
-            do{
-            //Split into two
-            p=r-1;    //Middle
-                for(int i=0;i<=p-1;i++){
-                    if(bag_items[i].compareTo(bag_items[i+1])<0){;
-                    
-                    
-                    bag_items_t = bag_items[i];   
-                        
-                    bag_items[i]=bag_items[i+1];
-                    bag_items[i+1]=bag_items_t;
-                    }
-                }
-                unsort=true; //NOT COMPLETE
-            }while(unsort);
+
             
             
             System.out.println("****************************************************");
@@ -191,41 +211,13 @@ public final class Bag<T extends Object & Comparable<? super T> > implements Bag
         System.out.println("*Contents of bag_of_strings:                       *");
         
         
-        //Loop through bag_of_strings - After Sort
+        //Loop through bag_of_<WHATEVER> - After Sort
         for(int i=0;i<a.length;i++) {
             System.out.printf("*a[%d]=%s\n",i,a[i]);
         }
         System.out.println("****************************************************");
         System.out.println("****************************************************");
         System.out.println("****************************************************");
-        
         return bag_items;
-    }//END of Sort 
-    
-    
-    public T[] sizeN_or_1(){
-            //Array Size 1 or Null
-            
-            System.out.println("*               Array Size is 1                    *");
-            System.out.println("****************************************************");
-            return bag_items;   //Returns Empty Bag
-        
-    }//End sizeN_or_1
-    
-    public T[] size_2(){
-        System.out.println("*               Array Size is 2                    *");
-        System.out.println("****************************************************");
-        if(bag_items[0].compareTo(bag_items[1])>0){;
-            System.out.println("*                    Swap                          *");
-            bag_items_t = bag_items[1];   
-            bag_items[1]=bag_items[0];
-            bag_items[0]=bag_items_t;
-            }
-        return bag_items;   //Returns Sorted Bag of size 2
-    }//End size_2
-    
-    public T[] size_3_Merge(){
-        
-    return bag_items;   //Returns Sorted Bag of size 2
     }
 }//End Class Bags

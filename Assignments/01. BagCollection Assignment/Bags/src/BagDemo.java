@@ -21,7 +21,7 @@ public class BagDemo {
 
 	//After Sort
         System.out.println("****************************************************");
-        System.out.println("*Here it is BEFORE sort....                         *");
+        System.out.println("*Here it is BEFORE sort....                        *");
         System.out.println("****************************************************");
 	//Print Bags after sort
         System.out.println("Size of bag_of_strings=" + bag_of_strings.getSize() );
@@ -61,7 +61,7 @@ public class BagDemo {
         
          //BEFORE SORT
         System.out.println("****************************************************");
-        System.out.println("*Here it is BEFORE sort....                         *");
+        System.out.println("*Here it is BEFORE sort....                        *");
         System.out.println("****************************************************");
         //Print bag_of_floats - After Sorted
         System.out.println("Size of bag_of_floats=" + bag_of_floats.getSize() );
