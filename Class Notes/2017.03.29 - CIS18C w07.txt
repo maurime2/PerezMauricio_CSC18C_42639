@@ -1,0 +1,68 @@
+00:00:00 Deques and Queues before stacks
+
+
+00:09:00	Double Linked List:
+				some of the functions with a double linked list, 
+				if you were to implement a stack data structure, 
+				you can do it with a double linked list.
+					Food for thought...
+
+00:14:30	Cloud Based IDE: Codeanywhere.com
+
+
+SL		*************
+		* data *Node*
+		*************
+
+
+DL		****************
+		*prev*data*next*
+		****************
+		
+00:41:30	insertFront:
+			1. Create a new node.
+					Created				Existing
+			****************		****************
+			*null* 10 *null*		*null* 15 *null*
+			****************		****************
+										h/t
+										
+			2. new node next --> head
+			****************		****************
+			*null* 10 *	   *	-->	*	* 15 *null*
+			****************		****************
+										h/t
+
+			3. head.prev-->nn
+			****************	-->	****************
+			*null* 10 *	   *		*	* 15 *null*
+			****************	<--	****************
+										h/t
+			4. head == nn
+			****************	-->	****************
+			*null* 10 *	   *		*	* 15 *null*
+			****************	<--	****************
+					h					t
+					
+			5. size++;
+			
+			
+00:48:09	If the head is blank...
+
+1:00:00		Inserting a value within the DLL
+			
+01:10:30	1:	Create new node
+			2:	Set mid = size/2
+			3:	if(position < mid){
+				current = head;
+				}
+				for(int i=0;i<mid;i++){
+				current=current.next;
+				}
+			4:	else{
+				current= tail;
+				for(i=size-1;i>=mid;i--){
+				current= current.prev;
+				}
+				}
+			
