@@ -1,4 +1,22 @@
 00:05:00		Stack Assignment together next week.
 
 00:10:23		LIFO - Last in first out.
+					Push O(1)	-->	Pushes an element on to the top of the stack.
+					Pop	 O(1)	-->	Pops the top element off the stack.
+					Peak O(1)	-->	Looks at top element on stack. 
+								Just returns top element of stack.
+								And leaves it there.
+								
+			Other Utility Functions:
+					isEmpty	O(1)	-->	Returns true if stack is empty.
+										Otherwise returns false if elements 
+										present.
+								
+					display O(n)	-->	Outputs contents of stack from top to 
+										bottom.
+				
+				
+00:23:				Stack can be an array or a link list.
+				Linked list it the best way.
+				Vector could be like a bag.
 					
