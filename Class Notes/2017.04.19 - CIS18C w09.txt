@@ -16,7 +16,47 @@
 										bottom.
 				
 				
-00:23:				Stack can be an array or a link list.
-				Linked list it the best way.
-				Vector could be like a bag.
+00:23:50				Stack can be an array or a link list.
+						Linked list it the best way.
+						Vector could be like a bag.
+			
+00:26:10	PUSH: 	STEP 0	-	Increment size counter by 1
+					STEP 1	-	Create new_node with element
+					STEP 2	-	if head==null, head = new_node
+								else:	new_node, set_Next=head
+										head = new_node
+										
+00:38:20	POP:	STEP 0	-	if stack not empty
+					STEP 1	-	decriment count by 1
+					STEP 2	-	value = head.getValue
+					STEP 3	-	head = head.getNext
+					STEP 4	-	return value
 					
+			PEAK:	STEP 0	-	If stack not empty
+					STEP 1	-	value = head.getValue
+					STEP 2	-	return value
+					STEP 3	-	else retuen null
+					
+			IMPROVED
+			POP		STEP 0 	-	value=peel()
+					STEP 1	-	if value is not null
+					STEP 2	-	head = head.getNext
+					STEP 3	-	return value
+					
+			IMPROVED		
+			PEAK:	STEP 0	-	If !isEmpty
+					STEP 1	-	value = head.getValue
+					STEP 2	-	return value
+					STEP 3	-	else retuen null
+					
+					
+00:52:10	CODE
+
+
+			INFIX TO POST FIX
+					(RPN)
+					
+			3*(5+6)		--	INFIX NOTATION
+			3 * 5 6 +	--	POSTFIX NOTATION
+						WITH STACKS:	3
+										
