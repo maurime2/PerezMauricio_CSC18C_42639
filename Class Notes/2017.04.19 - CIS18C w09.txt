@@ -1,0 +1,4 @@
+00:05:00		Stack Assignment together next week.
+
+00:10:23		LIFO - Last in first out.
+					
